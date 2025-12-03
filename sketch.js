@@ -8,6 +8,7 @@ let colorAmount = 0;
 let blurAmount = 0;
 let separateAmount = 35;
 let birdImg;
+let soundtrack;
 
 function preload(){
   //the background image
@@ -15,6 +16,9 @@ function preload(){
   
   // the bird image
   birdImg = loadImage("bird_image.png");
+  
+  //soundtrack
+  soundtrack = loadSound("Nostalgic_Noisefield.mp3");
 }
 
 function setup() {
@@ -28,6 +32,10 @@ function setup() {
     let b = new Boid(width / 2, height / 2);
     flock.addBoid(b);
   }
+  
+  //loop soundtrack
+  soundtrack.setVolume(0.7);
+  soundtrack.loop();
   
 }
 
